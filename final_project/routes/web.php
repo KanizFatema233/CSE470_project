@@ -22,3 +22,5 @@ Route::get('/', [App\Http\Controllers\front_page_controller::class, 'front_page'
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/attendance', [App\Http\Controllers\HomeController::class, 'attendance'])->name('home');
