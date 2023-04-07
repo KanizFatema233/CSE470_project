@@ -27,7 +27,11 @@
                                 </div>
                             </div>
                             <div class="col-6">
-                                <div class="p-3 border bg-light">Custom column padding</div>
+                                <div class="p-3 border bg-light">
+                                    <a href="inventory">
+                                       Inventory
+                                    </a>
+                                </div>
                             </div>
                             <div class="col-6">
                                 <div class="p-3 border bg-light">Custom column padding</div>
