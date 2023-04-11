@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\history;
+use DB;
 
 class HomeController extends Controller
 {
@@ -30,6 +32,27 @@ class HomeController extends Controller
     {
         return view('attendance');
     }
+
+
+    public function attendance_take(Request $request)
+    {
+        // print_r($request->name);
+        $record = new history;
+        $record->date = $request->date;
+        $record->time = $request->time;
+        $record->name = $request->name;
+        $record->save();
+        $user_name = $request->name.'';
+        $data = DB::select('SELECT * FROM `create_attendance_table` WHERE `name` LIKE '.'"'.$user_name.'"');
+        return view('attendance_view',['data'=>$data]);
+    }
+
+
+    public function inventory()
+    {
+        return view('inventory');
+    }
+
 
 
 }
