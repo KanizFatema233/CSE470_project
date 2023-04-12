@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\history;
+use App\Models\lunch;
 use DB;
 
 class HomeController extends Controller
@@ -52,6 +53,25 @@ class HomeController extends Controller
     {
         return view('inventory');
     }
+
+    public function food_management()
+    {
+        return view('food_management');
+    }
+
+    public function food_list(Request $request)
+    {
+        // print_r($request->all());
+        $record = new lunch;
+        $record->name = $request->name;
+        $record->employee_id = $request->employee_id;
+        $record->menu = $request->menu;
+        $record->save();
+        $user_name = $request->name.'';
+        $data = DB::select('SELECT * FROM `create_food_table` WHERE `name` LIKE '.'"'.$user_name.'"');
+        return view('food_management_view',['data'=>$data]);
+    }
+
 
 
 

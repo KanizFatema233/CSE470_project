@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
-|--------------------------------------------------------------------------   
+|--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
@@ -28,3 +28,7 @@ Route::get('/attendance', [App\Http\Controllers\HomeController::class, 'attendan
 Route::post('/attendance', [App\Http\Controllers\HomeController::class, 'attendance_take'])->name('attendance_take');
 
 Route::get('/inventory', [App\Http\Controllers\HomeController::class, 'inventory'])->name('inventory');
+
+Route::get('/food_management', [App\Http\Controllers\HomeController::class, 'food_management'])->name('food_management');
+
+Route::post('/food_management', [App\Http\Controllers\HomeController::class, 'food_list'])->name('food_list');

@@ -14,12 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('create_attendance_table', function (Blueprint $table) {
-            $table->id();
-            $table->string('date');
-            $table->string('time');
-            $table->string('name');
-            $table->timestamps();
-
+          $table->id();
+          $table->string('date');
+          $table->string('time');
+          $table->string('name');
+          $table->timestamps();
         });
     }
 

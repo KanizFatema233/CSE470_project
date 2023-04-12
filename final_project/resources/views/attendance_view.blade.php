@@ -33,28 +33,3 @@
 </div>
 
 @endsection
-
-<!--
-<html>
-
-   <head>
-      <title>View Records</title>
-   </head>
-
-   <body>
-      <table border = 1 style="width:80%">
-         <tr>
-            <td>Name</td>
-            <td>Date</td>
-            <td>Time</td>
-         </tr>
-         @foreach ($data as $dat)
-         <tr>
-            <td>{{ $dat->name }}</td>
-            <td>{{ $dat->date }}</td>
-            <td>{{ $dat->time }}</td>
-         </tr>
-         @endforeach
-      </table>
-   </body>
-</html> -->
